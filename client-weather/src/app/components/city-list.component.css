@@ -1,0 +1,15 @@
+.city-style {
+  border: lightgray ipx solid;
+  margin: 5px;
+  padding: 5px;
+  font-size: 2em;
+  transition-duration: 300ms;
+  transition-property: background-color, border;
+  transition-timing-function: linear;
+}
+
+.city-style:hover{
+  background-color: lightgray;
+  border:black
+  /* text-shadow: 5px 5px lightgray; */
+}

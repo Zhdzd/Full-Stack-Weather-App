@@ -8,13 +8,15 @@ import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import static ibf2021.ssf.weather.day18.Constants.*;
 
 import java.util.logging.Logger;
 
 @Configuration
-public class AppConfig {
+public class AppConfig implements WebMvcConfigurer{
 
     private final Logger logger = Logger.getLogger(Day18Application.class.getName());
 
@@ -57,4 +59,8 @@ public class AppConfig {
         return template;
     }
 
+    @Override
+    public void addCorsMappings(CorsRegistry cors){
+        cors.addMapping("/api/**");
+    }
 }
