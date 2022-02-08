@@ -1,13 +1,13 @@
-package com.example.WeatherApp;
+package ibf2021.ssf.weather.day18;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WeatherAppApplication {
+public class Day18Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WeatherAppApplication.class, args);
+		SpringApplication.run(Day18Application.class, args);
 	}
 
 }
